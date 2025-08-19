@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Main Content -->
+    <div id="mainContent">
+      <header>
+        <h1>🚀 AI-Free Coding</h1>
+      </header>
+      
+      <main>
+        <div class="status-section">
+          <div class="status-indicator">
+            <div class="status-dot" id="statusDot"></div>
+            <span id="statusText">AI Unblocked</span>
+          </div>
+          
+          <div class="timer-display">
+            <span class="timer-text" id="timerText">00:00:00</span>
+          </div>
+        </div>
+        
+        <div class="controls">
+          <button id="startBtn" class="btn btn-start">Start Coding</button>
+          <button id="stopBtn" class="btn btn-stop" disabled>Stop Session</button>
+        </div>
+        
+        <div class="stats">
+          <div class="stat-item">
+            <span class="stat-label">Sessions Today:</span>
+            <span class="stat-value" id="sessionCount">0</span>
+          </div>
+        </div>
+      </main>
+      
+      <footer>
+        <div class="tabs">
+          <button class="tab-btn active" id="mainTab">Main</button>
+          <button class="tab-btn" id="settingsTab">Settings</button>
+          <button class="tab-btn" id="logsTab">Logs</button>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Settings Panel -->
+    <div class="panel" id="settingsPanel">
+      <div class="panel-header">
+        <h3>🛠️ Settings</h3>
+        <button class="back-btn" id="settingsBackBtn">&larr; Back</button>
+      </div>
+      
+      <div class="panel-content">
+        <h4>Blocked Sites</h4>
+        <div class="add-site">
+          <input type="text" id="newSiteInput" placeholder="Enter domain (e.g., example.com)">
+          <button id="addSiteBtn" class="btn btn-small">Add</button>
+        </div>
+        <ul id="blocklistItems" class="blocklist">
+          <li>Loading...</li>
+        </ul>
+        <button id="resetBlocklistBtn" class="btn btn-secondary">Reset to Default</button>
+      </div>
+    </div>
+    
+    <!-- Logs Panel -->
+    <div class="panel" id="logsPanel">
+      <div class="panel-header">
+        <h3>📊 Session History</h3>
+        <button class="back-btn" id="logsBackBtn">&larr; Back</button>
+      </div>
+      
+      <div class="panel-content">
+        <div class="logs-actions-top">
+          <button id="exportLogsBtn" class="btn btn-small">Export JSON</button>
+        </div>
+        <div class="logs-container" id="logsContainer">
+          <div class="no-logs">Loading...</div>
+        </div>
+        <button id="clearLogsBtn" class="btn btn-secondary">Clear History</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

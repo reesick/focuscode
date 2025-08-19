@@ -1,0 +1,18 @@
+{
+  "sites": [
+    "chat.openai.com",
+    "claude.ai",
+    "gemini.google.com",
+    "copilot.microsoft.com",
+    "github.com/copilot",
+    "codeium.com",
+    "tabnine.com",
+    "bard.google.com",
+    "poe.com",
+    "character.ai",
+    "chatgpt.com",
+    "huggingface.co/chat",
+    "perplexity.ai",
+    "chatgpt.com"
+  ]
+}

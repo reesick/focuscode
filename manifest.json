@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "AI-Free Coding Focus",
+  "version": "1.0.0",
+  "description": "Block AI coding assistants to maintain focus during coding sessions",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "*://*.openai.com/*",
+    "*://*.claude.ai/*", 
+    "*://*.google.com/*",
+    "*://*.microsoft.com/*",
+    "*://*.github.com/*",
+    "*://*.codeium.com/*",
+    "*://*.tabnine.com/*",
+    "*://*.poe.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AI-Free Coding Focus"
+  }
+}
